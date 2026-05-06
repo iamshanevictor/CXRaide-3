@@ -1,0 +1,10 @@
+datasets:
+  nih:
+    kaggle_ref: ""
+    raw_dir: data/raw/nih
+    metadata_file: ""
+  vinbig:
+    kaggle_ref: ""
+    raw_dir: data/raw/vinbig
+    metadata_file: ""
+

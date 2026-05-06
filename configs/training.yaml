@@ -1,0 +1,8 @@
+experiment_name: cxraide-chest-xray-classification
+model_name: cxraide-baseline
+image_size: 224
+batch_size: 32
+epochs: 5
+learning_rate: 0.001
+random_seed: 42
+

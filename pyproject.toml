@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cxraide-data-pipeline"
+version = "0.1.0"
+description = "Production-style data engineering pipeline for CXRaide chest X-ray analysis."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "duckdb",
+  "great-expectations",
+  "kaggle",
+  "mlflow",
+  "pandas",
+  "prefect",
+  "pyarrow",
+  "pydantic",
+  "pyyaml",
+  "fastapi",
+  "uvicorn",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "ruff",
+]
+ml = [
+  "pillow",
+  "scikit-learn",
+  "torch",
+  "torchvision",
+]
+dbt = [
+  "dbt-core",
+  "dbt-duckdb",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

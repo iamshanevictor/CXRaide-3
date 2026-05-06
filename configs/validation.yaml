@@ -1,0 +1,11 @@
+required_manifest_columns:
+  - image_id
+  - dataset_source
+  - image_path
+  - labels
+  - split
+allowed_splits:
+  - train
+  - val
+  - test
+
