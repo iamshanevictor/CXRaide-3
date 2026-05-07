@@ -1,2 +1,0 @@
-"""CXRaide data pipeline package."""
-

@@ -1,1 +1,8 @@
-**/RAW_VINBIG/
+.venv/
+
+# Local-only raw image payloads. Keep CSV metadata and notebooks trackable.
+**/RAW_NIH/images/
+**/RAW_VINBIG/images/
+
+# Local-only generated model artifacts.
+outputs/models/

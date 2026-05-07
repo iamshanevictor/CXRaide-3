@@ -1,36 +1,28 @@
-# CXRaide Data Pipeline
+# CXRaide Machine Learning Project
 
-End-to-end data engineering portfolio project for CXRaide, a chest X-ray annotation and AI-assisted analysis system.
+Machine learning workspace for CXRaide, a chest X-ray annotation and AI-assisted analysis system.
 
-This repository is organized to demonstrate a production-style pipeline:
+This repository is organized around dataset preparation and model development:
 
-- Ingest NIH and VinBig chest X-ray datasets from Kaggle.
-- Store raw files outside Git and track dataset lineage.
-- Validate metadata, labels, image manifests, and train/validation/test splits.
-- Transform analytical tables with dbt.
+- Prepare NIH and VinBig chest X-ray metadata and image labels for ML experiments.
+- Keep raw image payloads outside Git while tracking lightweight CSV metadata.
 - Train and evaluate a deep learning model with MLflow tracking.
 - Serve model predictions through a lightweight API.
 
-## Pipeline Stages
+## Project Areas
 
-1. Ingestion: download and register Kaggle datasets.
-2. Data preparation: extract metadata, normalize labels, preprocess images, and create dataset splits.
-3. Validation: run Great Expectations checks before downstream processing.
-4. Transformation: use dbt models for clean analytical tables.
-5. Machine learning: train, evaluate, and track models.
-6. Deployment: expose model inference through FastAPI and Docker.
+- `notebooks/DataPreparation/`: dataset cleaning, merging, balancing, and exploratory preparation notebooks.
+- `notebooks/ML/`: notebook-based model dataset export and ML experiments.
+- `ml/`: model training, evaluation, inference, and experiment code.
+- `api/`: FastAPI inference service.
 
 ## Local-First Stack
 
-- Python for pipeline code
-- DuckDB for local analytics storage
-- dbt Core for SQL transformations
-- Great Expectations GX Core for validation
-- Prefect for beginner-friendly orchestration
+- Python for preparation and ML code
 - MLflow for experiment tracking
 - FastAPI for inference serving
 
 ## Data Notice
 
-Raw NIH and VinBig image files are not committed to this repository. See [data/README.md](data/README.md) for the expected local layout.
+Raw NIH and VinBig image files are not committed to this repository. See [notebooks/README.md](notebooks/README.md) for the expected notebook data layout.
 
