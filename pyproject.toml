@@ -23,10 +23,13 @@ dev = [
   "ruff",
 ]
 ml = [
+  "effdet",
   "pillow",
   "scikit-learn",
+  "timm",
   "torch",
   "torchvision",
+  "tqdm",
 ]
 
 [tool.ruff]
