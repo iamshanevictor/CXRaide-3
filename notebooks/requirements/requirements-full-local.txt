@@ -1,10 +1,18 @@
 # Full local environment
+
+# Notebook runtime
+jupyter
+ipykernel
+
+# EfficientDet-D4 training
 effdet
 mlflow
 pandas
 pillow
-pyyaml
 timm
 torch
 torchvision
 tqdm
+
+# Project/config utilities
+pyyaml
